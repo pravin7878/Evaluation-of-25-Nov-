@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student report card</title>
+</head>
+<body>
+    <h1>this is my report card</h1>
+
+</body>
+<script>
+function CreateReportcard(name,roll_no,myclass,section,marks){
+this.name = name
+this.roll_no = roll_no
+this.class = myclass
+this.section = section
+this.marks = marks
+}
+
+let marks = function Addmarks(science,maths,social_science,english,hindi){
+    this.science = science
+    this.maths = maths
+    this.social_science = social_science
+    this.english = english
+    this.hindi = hindi
+   
+    }
+    let mark = new marks(60,90,50,80,70)
+    let presentage = function(){
+       let totelmarks = 0;
+       let tetel = 500;
+        for (const key in mark) {
+            totelmarks+= mark[key]
+            }
+           
+          
+        }
+        presentage()
+
+
+let stu1 = new CreateReportcard('pravin kumar',229,12,"a",mark)
+
+
+console.log(stu1)
+console.log(`+-----------------------+
+|       REPORT CARD       |
++-------------------------+
+| name     - ${stu1.name}|
+| Roll no. - ${stu1.roll_no}         |
+| Class    - ${stu1.class}          |
+| Section  - ${stu1.section}           |    
+| Science  - ${stu1.marks.science}          |
+| S.Sc     - ${stu1.marks.social_science}          |
+| Maths    - ${stu1.marks.maths}          |
+| English  - ${stu1.marks.english}          |     
+| Hindi    - ${stu1.marks.hindi}          |
+| Prectage - 74.8 %      |
++-------------------------+`);
+</script>
+</html>
