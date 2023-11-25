@@ -26,7 +26,7 @@ let marks = function Addmarks(science,maths,social_science,english,hindi){
     this.hindi = hindi
    
     }
-    let mark = new marks(60,90,50,80,70)
+    let mark = new marks(85,90,80,70,90)
     let presentage = function(){
        let totelmarks = 0;
        let tetel = 500;
@@ -34,28 +34,29 @@ let marks = function Addmarks(science,maths,social_science,english,hindi){
             totelmarks+= mark[key]
             }
            
-          
+          return totelmarks*100/500
         }
-        presentage()
+        
+        console.log(presentage())
 
 
 let stu1 = new CreateReportcard('pravin kumar',229,12,"a",mark)
 
 
 console.log(stu1)
-console.log(`+-----------------------+
+console.log(`+-------------------------+
 |       REPORT CARD       |
 +-------------------------+
-| name     - ${stu1.name}|
-| Roll no. - ${stu1.roll_no}         |
-| Class    - ${stu1.class}          |
-| Section  - ${stu1.section}           |    
-| Science  - ${stu1.marks.science}          |
-| S.Sc     - ${stu1.marks.social_science}          |
-| Maths    - ${stu1.marks.maths}          |
-| English  - ${stu1.marks.english}          |     
-| Hindi    - ${stu1.marks.hindi}          |
-| Prectage - 74.8 %      |
+| name     - ${stu1.name} |
+| Roll no. - ${stu1.roll_no}          |
+| Class    - ${stu1.class}           |
+| Section  - ${stu1.section}            |    
+| Science  - ${stu1.marks.science}           |
+| S.Sc     - ${stu1.marks.social_science}           |
+| Maths    - ${stu1.marks.maths}           |
+| English  - ${stu1.marks.english}           |     
+| Hindi    - ${stu1.marks.hindi}           |
+| Prectage - ${presentage()}%           |
 +-------------------------+`);
 </script>
 </html>
